@@ -1,0 +1,95 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Создание заказов</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
+
+        <link rel="stylesheet" href="{% static 'mainapp\css\fontawesome.min.css' %}"/>
+        
+        <link rel="stylesheet" href="{% static 'mainapp\css\bootstrap.min.css' %}"/>
+
+        <link rel="stylesheet" href="{% static 'mainapp\css\templatemo-style.css' %}">
+      <style type="text/css" id="operaUserStyle"></style>
+    </head>
+    <body>
+      {{ required.user }}
+        <nav class="navbar navbar-expand-xl">
+            <div class="container h-100">
+                <a class="navbar-brand" href="/manager">
+                    <h1 class="tm-site-title mb-0">AirsoftRent</h1>
+                </a>
+                <button class="navbar-toggler ml-auto mr-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars tm-nav-icon"></i>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto h-100">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/manager">
+                                Добавление заказов
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link d-block" href="/">
+                              <b>Выйти</b>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="tm-bg-primary-dark tm-block tm-block-products">
+            <div class="tm-product-table-container">
+              <table class="table table-hover tm-table-small tm-product-table">
+                <thead>
+                  <tr>
+                    <th scope="col">&nbsp;</th>
+                    <th scope="col">offer_id</th>
+                    <th scope="col">services_id</th>
+                    <th scope="col">manager_id</th>
+                    <th scope="col">instructor_id</th>
+                    <th scope="col">time</th>
+                    <th scope="col">fullname</th>
+                    <th scope="col">phone_number</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row"><input type="checkbox"></th>
+                    <td>5</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>2022-07-20</td>
+                    <td>Игнат Панов</td>
+                    <td>+79824803378</td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><input type="checkbox"></th>
+                    <td>12</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>2022-04-07</td>
+                    <td>GASGASGs</td>
+                    <td>+79849128484</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <a href="/manager/add" class="btn btn-primary btn-block text-uppercase">Добавить заказ</a>
+            <button class="btn btn-primary btn-block text-uppercase">
+              Удалить выбранный заказ заказ
+            </button>
+            <a href="/manager/change" class="btn btn-primary btn-block text-uppercase">Изменить выбранный заказ</a>
+          </div>
+    </body>
